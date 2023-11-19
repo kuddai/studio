@@ -9,6 +9,7 @@ import {
 import { IterablePlayer, WorkerIterableSource } from "@foxglove/studio-base/players/IterablePlayer";
 
 import SampleNuscenesLayout from "./SampleNuscenesLayout.json";
+// import OurGeometry from "./OurGeometry.json";
 
 class SampleNuscenesDataSourceFactory implements IDataSourceFactory {
   public id = "sample-nuscenes";
@@ -17,11 +18,13 @@ class SampleNuscenesDataSourceFactory implements IDataSourceFactory {
   public iconName: IDataSourceFactory["iconName"] = "FileASPX";
   public hidden = true;
   public sampleLayout = SampleNuscenesLayout as IDataSourceFactory["sampleLayout"];
+  // public sampleLayout = OurGeometry as IDataSourceFactory["sampleLayout"];
 
   public initialize(
     args: DataSourceFactoryInitializeArgs,
   ): ReturnType<IDataSourceFactory["initialize"]> {
-    const bagUrl = "https://assets.foxglove.dev/NuScenes-v1.0-mini-scene-0061-df24c12.mcap";
+    // const bagUrl = "https://assets.foxglove.dev/NuScenes-v1.0-mini-scene-0061-df24c12.mcap";
+    const bagUrl = "https://yaviz.global-test.avride.ai/s3/max/sdg-visualization-man/mcaps/ride.mcap";
 
     const source = new WorkerIterableSource({
       initWorker: () => {

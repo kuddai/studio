@@ -2286,7 +2286,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@foxglove/eslint-plugin-studio@workspace:*, @foxglove/eslint-plugin-studio@workspace:packages/eslint-plugin-studio":
+"@foxglove/eslint-plugin-studio@workspace:packages/eslint-plugin-studio":
   version: 0.0.0-use.local
   resolution: "@foxglove/eslint-plugin-studio@workspace:packages/eslint-plugin-studio"
   dependencies:
@@ -2295,25 +2295,6 @@ __metadata:
     "@typescript-eslint/utils": 6.10.0
   languageName: unknown
   linkType: soft
-
-"@foxglove/eslint-plugin@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@foxglove/eslint-plugin@npm:1.0.0"
-  dependencies:
-    "@typescript-eslint/utils": ^6
-    tsutils: ^3
-    typescript: ^4 || ^5
-  peerDependencies:
-    eslint: ^7 || ^8
-    eslint-config-prettier: ^8
-    eslint-plugin-es: ^4
-    eslint-plugin-filenames: ^1
-    eslint-plugin-import: ^2
-    eslint-plugin-prettier: ^5
-    prettier: ^3
-  checksum: 455819c6d2a0de3901fee957688433d631dd7ecd5ad691c838b853cd63a1e2e94362b0b065e83410d979deccabea5959b46d5de994006d80d287c3afc3e4aed0
-  languageName: node
-  linkType: hard
 
 "@foxglove/hooks@workspace:*, @foxglove/hooks@workspace:packages/hooks":
   version: 0.0.0-use.local
@@ -6903,7 +6884,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:6.10.0, @typescript-eslint/utils@npm:^6":
+"@typescript-eslint/utils@npm:6.10.0":
   version: 6.10.0
   resolution: "@typescript-eslint/utils@npm:6.10.0"
   dependencies:
@@ -11720,8 +11701,6 @@ __metadata:
     "@babel/plugin-proposal-explicit-resource-management": 7.23.0
     "@babel/preset-env": 7.23.2
     "@babel/preset-typescript": 7.23.2
-    "@foxglove/eslint-plugin": 1.0.0
-    "@foxglove/eslint-plugin-studio": "workspace:*"
     "@foxglove/tsconfig": 2.0.0
     "@octokit/rest": 20.0.2
     "@storybook/addon-actions": 7.5.3
@@ -19869,7 +19848,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsutils@npm:^3, tsutils@npm:^3.21.0":
+"tsutils@npm:^3.21.0":
   version: 3.21.0
   resolution: "tsutils@npm:3.21.0"
   dependencies:
@@ -20025,7 +20004,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.2.2, typescript@npm:^4 || ^5":
+"typescript@npm:5.2.2":
   version: 5.2.2
   resolution: "typescript@npm:5.2.2"
   bin:
@@ -20035,7 +20014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.2.2#~builtin<compat/typescript>, typescript@patch:typescript@^4 || ^5#~builtin<compat/typescript>":
+"typescript@patch:typescript@5.2.2#~builtin<compat/typescript>":
   version: 5.2.2
   resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"
   bin:

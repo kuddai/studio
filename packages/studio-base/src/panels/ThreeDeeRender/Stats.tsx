@@ -8,21 +8,25 @@ import type { IRenderer } from "./IRenderer";
 import { useRendererEvent } from "./RendererContext";
 
 let stats: THREEStats | undefined;
+let drawFramesPanel: Panel | undefined;
 let drawCallsPanel: Panel | undefined;
 let trianglesPanel: Panel | undefined;
 let texturesPanel: Panel | undefined;
 let geometriesPanel: Panel | undefined;
+let maxFrames = 0;
 let maxDrawCalls = 0;
 let maxTriangles = 0;
 let maxTextures = 0;
 let maxGeometries = 0;
 
 function update(renderer: IRenderer) {
+  maxFrames = Math.max(maxFrames, renderer.gl.info.render.frame);
   maxDrawCalls = Math.max(maxDrawCalls, renderer.gl.info.render.calls);
   maxTriangles = Math.max(maxTriangles, renderer.gl.info.render.triangles);
   maxTextures = Math.max(maxTextures, renderer.gl.info.memory.textures);
   maxGeometries = Math.max(maxGeometries, renderer.gl.info.memory.geometries);
 
+  drawFramesPanel?.update(renderer.gl.info.render.frame, maxFrames);
   drawCallsPanel?.update(renderer.gl.info.render.calls, maxDrawCalls);
   trianglesPanel?.update(renderer.gl.info.render.triangles, maxTriangles);
   texturesPanel?.update(renderer.gl.info.memory.textures, maxTextures);
@@ -45,10 +49,12 @@ export function Stats(): JSX.Element {
     stats = new THREEStats();
     stats.dom.style.position = "relative";
     stats.dom.style.zIndex = "auto";
+    drawFramesPanel = new Panel("frames", "blue", "black");
     drawCallsPanel = new Panel("draws", "red", "black");
     trianglesPanel = new Panel("tris", "cyan", "black");
     texturesPanel = new Panel("textures", "yellow", "black");
     geometriesPanel = new Panel("geometries", "green", "black");
+    stats.addPanel(drawFramesPanel);
     stats.addPanel(drawCallsPanel);
     stats.addPanel(trianglesPanel);
     stats.addPanel(texturesPanel);
@@ -78,8 +84,9 @@ class THREEStats {
   public dom: HTMLDivElement;
   #beginTime: number;
   #prevTime: number;
+  #frames: number;
   #msPanel: Panel;
-  // fpsPanel: Panel;
+  #fpsPanel: Panel;
   #memPanel: Panel;
 
   public constructor() {
@@ -98,9 +105,10 @@ class THREEStats {
 
     this.#beginTime = performance.now();
     this.#prevTime = this.#beginTime;
+    this.#frames = 0;
 
     this.#msPanel = this.addPanel(new Panel("MS", "#9480ed", "#1e1a2f"));
-    // this.fpsPanel = this.addPanel(new Panel("FPS", "#0ff", "#002"));
+    this.#fpsPanel = this.addPanel(new Panel("FPS", "#0ff", "#002"));
     this.#memPanel = this.addPanel(new Panel("MB", "#f08", "#201"));
 
     this.showPanel(0);
@@ -126,13 +134,15 @@ class THREEStats {
 
   public end = () => {
     const time = performance.now();
+    ++this.#frames;
 
     this.#msPanel.update(time - this.#beginTime, 1000 / 30);
 
     if (time >= this.#prevTime + 1000) {
-      // this.fpsPanel.update((this.frames * 1000) / (time - this.prevTime), 100);
+      this.#fpsPanel.update(1000 * this.#frames / (time - this.#prevTime), 120);
 
       this.#prevTime = time;
+      this.#frames = 0;
 
       const memory = (
         performance as unknown as { memory: { usedJSHeapSize: number; jsHeapSizeLimit: number } }
