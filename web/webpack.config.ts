@@ -16,5 +16,8 @@ const params: ConfigParams = {
   version: packageJson.version,
 };
 
+// NOTE kuddai: just changed public path for our nginx release on path
+// https://yaviz.global-test.avride.ai/foxglove
+// Otherwise css and js are fetched from root and nginx serve yaviz frontend there
 // foxglove-depcheck-used: webpack-dev-server
-export default [devServerConfig(params), mainConfig(params)];
+export default [devServerConfig(params), mainConfig({...params, publicPath: '/foxglove/'})];
