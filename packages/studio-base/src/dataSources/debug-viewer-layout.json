@@ -1,0 +1,595 @@
+{
+  "configById": {
+    "3D!12ucir": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 15.127747439670095,
+        "phi": 66.15015531392282,
+        "thetaOffset": -75.79237878117078,
+        "targetOffset": [
+          -1036.6910641425302,
+          523.1910129672921,
+          -2.2119517371920083e-15
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 1,
+        "far": 5000
+      },
+      "scene": {
+        "syncCamera": false,
+        "enableStats": true
+      },
+      "transforms": {},
+      "topics": {
+        "/semantic_map": {
+          "visible": true
+        },
+        "/markers/annotations": {
+          "visible": true
+        },
+        "/map": {
+          "visible": false,
+          "colorField": "color",
+          "colorMode": "gradient",
+          "colorMap": "turbo",
+          "gradient": [
+            "#ffffff",
+            "#000000"
+          ],
+          "minValue": 0,
+          "maxValue": 50
+        },
+        "/drivable_area": {
+          "visible": false,
+          "minColor": "#ffffff",
+          "colorField": "drivable_area",
+          "colorMode": "gradient",
+          "colorMap": "turbo",
+          "gradient": [
+            "#ffffff",
+            "#ffffff00"
+          ],
+          "maxValue": 1,
+          "minValue": 0
+        },
+        "/RADAR_FRONT": {
+          "visible": true,
+          "colorField": "x",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/RADAR_FRONT_LEFT": {
+          "visible": true,
+          "colorField": "x",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/RADAR_FRONT_RIGHT": {
+          "visible": true,
+          "colorField": "x",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/RADAR_BACK_LEFT": {
+          "visible": true,
+          "colorField": "x",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/RADAR_BACK_RIGHT": {
+          "visible": true,
+          "colorField": "x",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/LIDAR_TOP": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/markers/car": {
+          "visible": true
+        },
+        "/visualizator/object_trajectories": {
+          "visible": true
+        },
+        "/visualizator/parked_car_classifier": {
+          "visible": true
+        },
+        "/visualizator/ml_speed_speed_colored": {
+          "visible": true
+        },
+        "/visualizator/ml_speed_distribution": {
+          "visible": true
+        },
+        "/visualizator/ml_speed": {
+          "visible": true
+        },
+        "/visualizator/waypoints": {
+          "visible": true
+        },
+        "/visualizator/trajectory_scores": {
+          "visible": true
+        },
+        "/visualizator/trajectory_line": {
+          "visible": true
+        },
+        "/visualizator/vehicle_first_pose_intersection_intent_prediction": {
+          "visible": true
+        },
+        "/visualizator/vehicle_snail_intent_prediction": {
+          "visible": true
+        },
+        "/visualizator/vehicle_stationarity_intent_prediction": {
+          "visible": true
+        },
+        "/visualizator/vehicle_yield_intent_lane_path_conditioned_prediction": {
+          "visible": true
+        },
+        "/visualizator/vehicle_yield_intent_prediction": {
+          "visible": true
+        },
+        "/visualizator/remote_control_trajectories": {
+          "visible": true
+        },
+        "/visualizator/rough_trajectory": {
+          "visible": true
+        },
+        "/visualizator/segmented_trajectory": {
+          "visible": true
+        },
+        "/visualizator/solid_line_visualizer": {
+          "visible": true
+        },
+        "/visualizator/parking_speed_plan": {
+          "visible": true
+        },
+        "/visualizator/pedestrian_crossing_intent_prediction": {
+          "visible": true
+        },
+        "/visualizator/planner_vehicle_first_pose_intersection_intent_lane_path_conditioned_prediction": {
+          "visible": true
+        },
+        "/visualizator/milestones": {
+          "visible": true
+        },
+        "/visualizator/maneuver_context": {
+          "visible": true
+        },
+        "/visualizator/dynamic_margins": {
+          "visible": true
+        },
+        "/visualizator/global_planning_field": {
+          "visible": true
+        },
+        "/visualizator/detour_zones": {
+          "visible": false
+        },
+        "/visualizator/danger_segments_track_ids": {
+          "visible": true
+        },
+        "/visualizator/danger_segments": {
+          "visible": true
+        },
+        "/visualizator/dssm/vehicle_trajectories": {
+          "visible": false
+        },
+        "/visualizator/all_dynamic_estimates": {
+          "visible": true
+        },
+        "/visualizator/best_dynamic_estimates": {
+          "visible": false
+        },
+        "/visualizator/antiflap_rough_trajectory": {
+          "visible": false
+        },
+        "/visualizator/asessors_baton_obstacles": {
+          "visible": true
+        },
+        "/visualizator/bl_best_ml_geometry": {
+          "visible": false
+        },
+        "/visualizator/bl_ml_geometry": {
+          "visible": false
+        },
+        "/visualizator/dssm/pedestrian_trajectories": {
+          "visible": false
+        },
+        "/visualizator/dssm/pedestrian_trajectories_distribution": {
+          "visible": false
+        },
+        "/visualizator/dssm/vehicle_trajectories_distribution": {
+          "visible": false
+        },
+        "/visualizator/target_parking_area": {
+          "visible": true
+        },
+        "/lidarsky_fender_left_packets": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/lidarsky_fender_right_packets": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/lidarsky_front_ch0_packets": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/lidarsky_front_ch1_packets": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/lidarsky_grille_packets": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/lidarsky_rear_ch0_packets": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/lidarsky_rear_ch1_packets": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/PlanningLoop/PlanningLoop_0/baton_avoid_zones": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/baton_static_objects": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/baton_stationary_objects": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/best_corrected_preliminary_finish": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/best_finish": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/best_preliminary_finish": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/best_preliminary_finish_bp": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/best_preliminary_finish_corrected_bp": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/best_preliminary_finish_corrected_deep__lp": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/best_preliminary_finish_corrected_lp": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/best_preliminary_finish_deep_lp": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/best_preliminary_finish_lp": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/charts/final_trajectory_curvature": {
+          "visible": false
+        },
+        "/PlanningLoop/PlanningLoop_0/charts/final_trajectory_from_speed_planning_curvature": {
+          "visible": false
+        },
+        "/PlanningLoop/PlanningLoop_0/charts/final_trajectory_dynamic_margin": {
+          "visible": false
+        },
+        "/PlanningLoop/PlanningLoop_0/distance_grid": {
+          "visible": false
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_0": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_1": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_10": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_11": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_12": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_13": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_14": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_15": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_16": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_17": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_18": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_19": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_2": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_20": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_21": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_22": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_23": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_24": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_25": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_26": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_27": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_28": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_29": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_3": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_30": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_31": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_33": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_32": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_34": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_35": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_36": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_37": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_38": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edge_drafts/edge_drafts_39": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/00/01": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/00/02": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/00/03": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/00/04": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/00/05": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/04/18": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/19/20": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/19_s/12": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/19_s/13": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/19_s/14": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/19_s/15": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/19_s/16": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/19_s/17": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/19_s/18": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/19_s/19": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/19_s/20": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/20/21": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/20_s/14": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/20_s/13": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/20_s/15": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/20_s/16": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/20_s/17": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/20_s/18": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/20_s/19": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/20_s/21": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/21/22": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/21_s/14": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges/21_s/15": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/lane_path": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/final_trajectory": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges_unpassable": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/edges_disabled": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/final_trajectory_from_speed_planning": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/milestones": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/nodes": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/original_final_trajectory": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/original_raw_trajectory": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/planning_fields/global_field": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/planning_fields/local_field_0": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/planning_fields/local_field_1": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/pose_recommended_to_stop": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/previous_trajectory": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/road_markings": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/road_polygon_distance_grid": {
+          "visible": false
+        },
+        "/PlanningLoop/PlanningLoop_0/rover_polygon": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/support_lane": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/support_oriented_lane_offsets": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/target_lane": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/target_oriented_lane_offsets": {
+          "visible": true
+        },
+        "/PlanningLoop/PlanningLoop_0/Target_parked_distance_grid": {
+          "visible": true
+        }
+      },
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "followMode": "follow-pose",
+      "followTf": "base_link",
+      "imageMode": {}
+    },
+    "Tab!1xyw5ix": {
+      "activeTabIdx": 0,
+      "tabs": [
+        {
+          "title": "Perception",
+          "layout": "3D!12ucir"
+        }
+      ]
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": "Tab!1xyw5ix"
+}

@@ -17,6 +17,7 @@ import { usePlayerSelection } from "@foxglove/studio-base/context/PlayerSelectio
 import { defaultLayout } from "@foxglove/studio-base/providers/CurrentLayoutProvider/defaultLayout";
 import { migratePanelsState } from "@foxglove/studio-base/services/migrateLayout";
 import OurGeometryLayout from "@foxglove/studio-base/dataSources/OurGeometry.json";
+import DebugViewerLayout from "@foxglove/studio-base/dataSources/debug-viewer-layout.json";
 
 function selectLayoutData(state: LayoutState) {
   return state.selectedLayout?.data;
@@ -41,6 +42,8 @@ export function CurrentLayoutLocalStorageSyncAdapter(): JSX.Element {
     const searchParams = new URLSearchParams(window.location.search);
     if (searchParams.get('avrideLayout') === 'ourGeometry') {
       setCurrentLayout({ data: OurGeometryLayout });
+    }  else if (searchParams.get('avrideLayout') === 'debugViewer') {
+      setCurrentLayout({ data: DebugViewerLayout });
     }
   }, [selectedSource, setCurrentLayout]);
 
